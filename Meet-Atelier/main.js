@@ -1,3 +1,4 @@
+/*
 // Element à selectionner
 const main = document.getElementById("main");
 
@@ -52,3 +53,22 @@ affichageMain(
 "Ceci est un paragraphe",
 "Ceci est une liste"
 )
+*/
+
+
+const element = document.getElementById("main")
+function insererNode(balise,contenu) {
+    const baliser = document.createElement(balise)
+    const texte = document.createTextNode(contenu)
+    baliser.append(texte)
+    return element.appendChild(baliser)
+}
+
+// p
+insererNode("p" ,"On fait un meet 1") 
+// div
+insererNode("div" ,"On fait un meet 2")
+// li
+insererNode("li" ,"On fait un meet 3")
+// section
+insererNode("section" ,"On fait un meet 4")
